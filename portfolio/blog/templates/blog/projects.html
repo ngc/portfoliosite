@@ -1,13 +1,30 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="custom.css">
         <title>Nathan Coulas</title>
+
+      <style>
+        .center {
+          margin-left: auto;
+           margin-right: auto;
+            display:block;
+            width: 90%;
+        }
+
+        .card-image{
+          
+        }
+
+      </style>
+
     </head>
     <body>
         
       {% include 'blog/navbar.html' %}
+     
 
    
       <div class="container" style = "max-width: 90%;">
@@ -21,6 +38,40 @@
       </div>
       <p></p>
   
+    </div>
+
+    <div class="center"> 
+
+      <div class="card-deck">
+        <div class="card" style="max-width: 32%">
+          <img class="card-img-top card-image" src="{% static 'blog\images\precursorlogo.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" style="max-width: 32%">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+        <div class="card" style="max-width: 32%">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
 
 
