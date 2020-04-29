@@ -1,3 +1,7 @@
 .card-header-text{
     font-size:xx-small !important;
 }
+
+.card-deck{
+    margin-bottom: 1%;
+}

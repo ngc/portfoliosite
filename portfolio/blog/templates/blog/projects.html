@@ -3,7 +3,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="custom.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'blog\css\custom.css' %}">
         <title>Nathan Coulas</title>
 
       <style>
@@ -40,7 +40,37 @@
   
     </div>
 
+
+    <!-- IMAGE SIZE MUST BE 640 x 512-->
     <div class="center"> 
+
+      <div class="card-deck">
+        <div class="card" style="max-width: 32%">
+          <img class="card-img-top card-image" src="{% static 'blog\images\precursorlogo.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">PRECURSOR</h5>
+            <p class="card-text">This was my submission to the 46th Ludum Dare game jam. The whole game was made in Unity using C# along with utilities such as Photoshop, Blender and BFXR</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" style="max-width: 32%">
+          <img class="card-img-top" src="{% static 'blog\images\precursorlogo.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+        <div class="card" style="max-width: 32%">
+          <img class="card-img-top" src="{% static 'blog\images\precursorlogo.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
 
       <div class="card-deck">
         <div class="card" style="max-width: 32%">
@@ -52,7 +82,7 @@
           </div>
         </div>
         <div class="card" style="max-width: 32%">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="{% static 'blog\images\precursorlogo.png' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -61,7 +91,7 @@
         </div>
 
         <div class="card" style="max-width: 32%">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="{% static 'blog\images\precursorlogo.png' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -69,6 +99,7 @@
           </div>
         </div>
       </div>
+      
 
 
 
