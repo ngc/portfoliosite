@@ -45,11 +45,15 @@
     <!-- IMAGE SIZE MUST BE 640 x 512-->
     <div class="center"> 
 
-
       <div class="card-deck">
-        {% include 'blog/projectcard.html' %}
-        </div>
-
+        {% for Project in projects %}
+            {% include 'blog/projectcard.html' %}
+            {% if forloop.counter|divisibleby:"3"  %}
+                </div><div class="card-deck">
+            {% endif %}
+        {% endfor %}
+    </div>
+     
       </div>
       
     </div>

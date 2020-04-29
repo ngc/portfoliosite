@@ -1,6 +1,7 @@
 {% load static %}
 {% block content %}
-{% for Project in projects %}
+
+
 <div class="card" style="max-width: 32%">
     <img class="card-img-top" src="{% static Project.imgCode %}" alt="Card image cap">
     <div class="card-body">
@@ -14,6 +15,9 @@
     </div>
 
   </div>
-{% endfor %}
-  
+
+ 
+
   {% endblock content %}
+
+
