@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mwxzk6-+y1qj^k!yj4jkroh0!e5+#=*mu_%*cg3@$u%*1440ph'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nathancoulas.com', 'www.nathancoulas.com', 'www.nathan.software', 'nathan.software']
 
 
 # Application definition
