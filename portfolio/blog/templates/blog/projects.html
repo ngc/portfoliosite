@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'blog\css\custom.css' %}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
         <title>Nathan Coulas</title>
-
+        {% include 'blog/icons.html' %}
       <style>
         .center {
           margin-left: auto;
@@ -21,8 +21,10 @@
 
       </style>
 
+{% include 'blog/icons.html' %}
     </head>
     <body>
+      
         
       {% include 'blog/navbar.html' %}
      
@@ -58,7 +60,7 @@
       
     </div>
 
-
     </body>
+
 
 </html>
