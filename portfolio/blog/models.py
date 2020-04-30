@@ -7,8 +7,8 @@ class Project(models.Model):
     body = models.TextField()
     githubLink = models.CharField(max_length=250)
     otherLink = models.CharField(max_length=250)
+    otherLinkName = models.CharField(max_length=250)
     imgCode = models.CharField(max_length=250)
-
-
-    def __str__(self):
+    order = models.IntegerField()
+        def __str__(self):
         return self.title
