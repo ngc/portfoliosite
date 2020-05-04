@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.home),
     path('projects/', views.projects),
     path('resume/', views.resume),
-    path('cp/', views.cp)
+    path('dmojprofilemaker/', views.dmoj)
 ]

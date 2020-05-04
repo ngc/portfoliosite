@@ -15,5 +15,5 @@ def projects(request):
 def resume(request):
     return render(request, 'blog/resume.html')
 
-def cp(request):
-    return render(request, 'blog/cp.html')
+def dmoj(request):
+    return render(request, 'blog/dmojprofilemaker.html')

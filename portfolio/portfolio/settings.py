@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['nathancoulas.com', 'www.nathancoulas.com', 'www.nathan.softwar
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
-    'dmojpics.apps.DmojpicsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
