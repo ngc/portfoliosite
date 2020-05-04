@@ -23,15 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mwxzk6-+y1qj^k!yj4jkroh0!e5+#=*mu_%*cg3@$u%*1440ph'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['nathancoulas.com', 'www.nathancoulas.com', 'www.nathan.software', 'nathan.software']
+ALLOWED_HOSTS = ['nathancoulas.com', 'www.nathancoulas.com', 'www.nathan.software', 'nathan.software', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+    'dmojpics.apps.DmojpicsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
