@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -16,18 +17,22 @@
     <h1 align="center"> DMOJ Profile Card Maker</h1>
     
     <form>
-    <div align="center" class="">
+    <div align="center" class="" action="submit" method="post">
         <div class="col-sm-7">
           <input type="username" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Xyene....">
           <p style="color: rgb(212, 212, 212);"> <i>psst</i>, type in your username!</p>
     </div>
     </div>
     </form>
+
+    {% for n in profiles %}
+    {% block content %}
+    <img style="margin-left: 40%; border-radius: 2%; border-color: black;" align="center" src="{{ n.picture.url }}">
+    {% endblock %}
+    {% endfor %}
+    
     </div>
     
-
-
-
 
 
     </body>

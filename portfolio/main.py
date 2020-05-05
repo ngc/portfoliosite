@@ -2,9 +2,22 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw 
 from bs4 import BeautifulSoup
+from django.core.files import File
 import requests
 import json
 import sys
+
+##DJANGO
+import os
+import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
+django.setup()
+
+from blog.models import Profile
+
+##
+
+
 
 def textColor(rating):
 
@@ -76,4 +89,6 @@ draw.text((14, 167 + row * 3), "Points: " + str(DATA_POINTS)[:8], (0, 0, 0), fon
 draw.ellipse((130, 232, 170, 272), fill = textColor(DATA_RATING))#outline = textColor(DATA_RATING))
 
 img = img.resize((360, 420), Image.ANTIALIAS)
-img.save('portfolio/static/blog/images/img.png')
+
+path = "media/img_l5oCH4I.png"
+img.save(path)

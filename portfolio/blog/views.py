@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Project
+from .models import Profile
+
 
 # Create your views here.
 def home(request):
@@ -16,4 +18,12 @@ def resume(request):
     return render(request, 'blog/resume.html')
 
 def dmoj(request):
-    return render(request, 'blog/dmojprofilemaker.html')
+    context = {
+        'profiles': Profile.objects.all()
+    }
+    return render(request, 'blog/dmojprofilemaker.html', context)
+
+def submit(request):
+    info=request.POST['info']
+    print("LOLOOLOLOL")
+    # do something with info

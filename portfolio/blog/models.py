@@ -10,3 +10,7 @@ class Project(models.Model):
     otherLinkName = models.CharField(max_length=250)
     imgCode = models.CharField(max_length=250)
     order = models.IntegerField()
+
+class Profile(models.Model):
+    name = models.CharField(max_length=100)
+    picture = models.ImageField(default='default.png', blank=True)
