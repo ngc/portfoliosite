@@ -87,8 +87,7 @@ draw.text((170, 173 + row * 1), str(DATA_RATING), textColor(DATA_RATING), font=f
 draw.text((14, 173 + row * 2), "Submissions: " + str(DATA_MIN_RATING), (0, 0, 0), font=font) 
 draw.text((14, 167 + row * 3), "Points: " + str(DATA_POINTS)[:8], (0, 0, 0), font=font) 
 draw.ellipse((130, 232, 170, 272), fill = textColor(DATA_RATING))#outline = textColor(DATA_RATING))
-
 img = img.resize((360, 420), Image.ANTIALIAS)
 
-path = "media/img_l5oCH4I.png"
+path = "media/img_JJeyJCW.png"
 img.save(path)

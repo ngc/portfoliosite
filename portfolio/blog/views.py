@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Project
 from .models import Profile
-
+from subprocess import run, PIPE
+import sys
 
 # Create your views here.
 def home(request):
@@ -23,7 +24,8 @@ def dmoj(request):
     }
     return render(request, 'blog/dmojprofilemaker.html', context)
 
-def submit(request):
-    info=request.POST['info']
-    print("LOLOOLOLOL")
-    # do something with info
+def execute(request):
+    info=request.POST.get("info")
+    out= run([sys.executable, 'C:/Users/Nathan/Desktop/port/portfoliosite/portfolio/main.py', info], shell = False, stdout=PIPE)
+    print(out)
+    return dmoj(request)

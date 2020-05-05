@@ -16,10 +16,11 @@
     <div style="margin-top: 12%;">
     <h1 align="center"> DMOJ Profile Card Maker</h1>
     
-    <form>
-    <div align="center" class="" action="submit" method="post">
+    <form action="/execute/" method="post">
+        {% csrf_token %}
+    <div align="center" class="">
         <div class="col-sm-7">
-          <input type="username" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Xyene....">
+          <input type="username" name="info" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Xyene....">
           <p style="color: rgb(212, 212, 212);"> <i>psst</i>, type in your username!</p>
     </div>
     </div>

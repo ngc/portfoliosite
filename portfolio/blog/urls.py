@@ -9,7 +9,7 @@ urlpatterns = [
     path('projects/', views.projects),
     path('resume/', views.resume),
     path('dmojprofilemaker/', views.dmoj),
-    path('submit', views.submit)
+    path('execute/', views.execute)
 ]
 
 urlpatterns += staticfiles_urlpatterns()
