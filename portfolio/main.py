@@ -61,7 +61,7 @@ DATA_MIN_RATING = r.text.count('problem')
 page = requests.get("https://dmoj.ca/user/" + DATA_USERNAME)
 soup = BeautifulSoup(page.text)
 tags = soup.findAll('img')
-profile_url = "https://" + tags[1]['src'][2:]
+profile_url = "https://" + tags[1]['src'][8:]
 
 
 #################
