@@ -13,14 +13,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
 django.setup()
 
-from blog.models import Profile
-
-##
-
-
-
 def textColor(rating):
-
     if(rating == None):
         return (0, 0, 0)
     if(rating < 1000):
