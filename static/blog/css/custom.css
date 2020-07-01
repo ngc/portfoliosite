@@ -26,3 +26,7 @@ html, body {
     clear:both;
     padding-top:20px;
   } 
+
+  main-container.container{
+    background-color: aqua;
+  }
