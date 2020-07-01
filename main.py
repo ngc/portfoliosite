@@ -82,5 +82,5 @@ draw.text((14, 167 + row * 3), "Points: " + str(DATA_POINTS)[:8], (0, 0, 0), fon
 draw.ellipse((130, 232, 170, 272), fill = textColor(DATA_RATING))#outline = textColor(DATA_RATING))
 img = img.resize((360, 420), Image.ANTIALIAS)
 
-path = "media/img_JJeyJCW.png"
+path = "/home/nathan/Development/portfoliosite/media/img_JJeyJCW.png"
 img.save(path)

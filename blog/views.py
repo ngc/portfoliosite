@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Project
 from .models import Profile
@@ -7,7 +7,7 @@ import sys
 
 # Create your views here.
 def home(request):
-    return render(request, 'blog/base.html')
+    return render(request, 'blog/about.html')
 
 def projects(request):
     context = {
@@ -26,6 +26,6 @@ def dmoj(request):
 
 def execute(request):
     info=request.POST.get("info")
-    out= run([sys.executable, 'C:/Users/Nathan/Desktop/port/portfoliosite/portfolio/main.py', info], shell = False, stdout=PIPE)
+    out= run([sys.executable, '/home/nathan/Development/portfoliosite/main.py', info], shell = False, stdout=PIPE)
     print(out)
-    return dmoj(request)
+    return redirect(dmoj)
