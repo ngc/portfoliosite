@@ -8,10 +8,12 @@
 
 html, body {
     height: 100%;
+    background-color: rgb(255, 255, 255);
   }
-  
-  #wrap {
-    min-height: 100%;
+
+  .card-img-top{
+    width:100%;
+    height:auto;
   }
   
   #main {
@@ -31,3 +33,11 @@ html, body {
     max-width: 500px;
     margin: auto;
   }
+
+.wrapper {
+    max-width: 1171px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}

@@ -8,25 +8,51 @@
 
 html, body {
     height: 100%;
+    background-color: rgb(255, 255, 255);
   }
-  
-  #wrap {
-    min-height: 100%;
+
+  .card-img-top{
+    width:100%;
+    height:auto;
   }
   
   #main {
     overflow:auto;
-    padding-bottom:150px; /* this needs to be bigger than footer height*/
+    padding-bottom:150px; 
   }
   
   .footer {
     position: relative;
-    margin-top: -150px; /* negative value of footer height */
+    margin-top: -150px; 
     height: 150px;
     clear:both;
     padding-top:20px;
   } 
 
-  main-container.container{
-    background-color: aqua;
+  .content {
+    max-width: 500px;
+    margin: auto;
   }
+
+.wrapper {
+    max-width: 1171px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.desktopbar{
+
+}
+
+@media screen and (max-width: 600px) {
+  #desktopbar {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}

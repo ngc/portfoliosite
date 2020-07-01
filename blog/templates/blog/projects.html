@@ -1,37 +1,8 @@
-<!DOCTYPE html>
+{% extends 'blog/base.html' %}
 {% load static %}
-<html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'blog\css\custom.css' %}">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-        <title>Nathan Coulas</title>
-        {% include 'blog/icons.html' %}
-      <style>
-        .center {
-          margin-left: auto;
-           margin-right: auto;
-            display:block;
-            width: 90%;
-        }
+{% block content %}
 
-        .card-image{
-          
-        }
-
-      </style>
-
-{% include 'blog/icons.html' %}
-    </head>
-    <body>
-      
-        
-      {% include 'blog/navbar.html' %}
-     
-
-   
-      <div class="container" style = "max-width: 90%;">
-        <div class="row" style="margin-top: 20px; ">
+  <div class="row" style="margin-top: 20px; ">
                  <h1>
                    Projects
                 </h1>
@@ -39,28 +10,29 @@
           <div class="row mt-0">
         <hr class="col col-10 ml-1">
       </div>
-      <p></p>
-  
-    </div>
-
-
+    
     <!-- IMAGE SIZE MUST BE 640 x 512-->
-    <div class="center"> 
-
-      <div class="card-deck">
+    <div class="row align-items-stretch">
         {% for Project in projects %}
-            {% include 'blog/projectcard.html' %}
-            {% if forloop.counter|divisibleby:"3"  %}
-                </div><div class="card-deck">
-            {% endif %}
+        <div class="col" style="width: 20rem;">
+        <div class="card mt-2 d-inline-block" style="min-width: 10rem; max-width: 22rem; width: auto !important;">
+          <img class="card-img-top" src="{% static Project.imgCode %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ Project.title }}</h5>
+            <p class="card-text">{{ Project.body }}</p> 
+          </div>
+      
+          <div class="card-footer bg-white">
+            <a href="{{ Project.otherLink }}" class="btn btn-success"> <i class="fas fa-link"></i> {{ Project.otherLinkName }} </a>
+            <a href="{{ Project.githubLink }}" class="btn btn-primary"> <i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>      
+
+        </div>
+        {% if forloop.counter|divisibleby:"3"  %}
+      </div><div class="row mt-2 align-items-stretch">
+        {% endif %}
         {% endfor %}
     </div>
-     
-      </div>
-      
-    </div>
 
-    </body>
-
-
-</html>
+{% endblock %}

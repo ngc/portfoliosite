@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,29 +22,15 @@
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'blog/images/icons/favicon-16x16.png' %}">
     </head>
     <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2); margin-bottom: 2%;">
-        <div class="container-fluid navbar-collapse" id="navbarNavAltMarkup" style="max-width: 62%;">
-          <div class="navbar-nav">
-            <a class="navbar-brand" href="..">Nathan Coulas</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="nav-item nav-link " href="..">Home <span class="sr-only">(test)</span></a>
-            <a class="nav-item nav-link" href="../projects">Projects</a>
-            <a class="nav-item nav-link" href="../resume">Résumé</a>
-            <a class="nav-item nav-link" href="https://github.com/thaniel-c">GitHub</a>
-          </div>
-        </div>
-      </nav>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2); margin-bottom: 2%;">
-        <a class="navbar-brand" href="#">Nathan Coulas</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="../../..">Menu</a>
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" style="max-width: 43%;" id="navbarNav">
+          <a class="container">
           <ul class="navbar-nav">
+            <a class="d-block navbar-brand" href="../../..">Nathan Coulas</a>
             <li class="nav-item active">
               <a class="nav-item nav-link " href="..">Home <span class="sr-only">(test)</span></a>
             </li>
@@ -56,14 +44,20 @@
               <a class="nav-item nav-link" href="https://github.com/thaniel-c">GitHub</a>
             </li>
           </ul>
-        </div>
+        </a>
       </nav>
-      
-    <div>     
-    <div class="container" style = "max-width: 60%;">
-      {% block content %}
-      {% endblock %}
-    </div>
+
+      <div class="wrapper" style="height: 100%; background-color: white;">
+        <div>     
+        <div class="container-fluid" style = "margin-left: auto; margin-right: auto; display: table;">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     </body>
 
