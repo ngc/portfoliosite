@@ -7,20 +7,34 @@ import sys
 
 # Create your views here.
 def home(request):
-    return render(request, 'blog/about.html')
+    context = {
+        'navtag': 0
+    }
+    return render(request, 'blog/about.html', context)
 
 def projects(request):
     context = {
-        'projects': Project.objects.all()
+        'projects': Project.objects.all().order_by('order'),
+        'navtag': 1
     }
     return render(request, 'blog/projects.html', context)
 
+def lastfm(request):
+    context = {
+        'navtag': 1
+    }
+    return render(request, 'blog/lastfmgraph.html', context)
+
 def resume(request):
-    return render(request, 'blog/resume.html')
+    context = {
+        'navtag': 2
+    }
+    return render(request, 'blog/resume.html', context)
 
 def dmoj(request):
     context = {
-        'profiles': Profile.objects.all()
+        'profiles': Profile.objects.all(),
+        'navtag': 1
     }
     return render(request, 'blog/dmojprofilemaker.html', context)
 
