@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Project, Profile, LastFMGraph
 from subprocess import run, PIPE
+from .forms import LastFMGraphForm
 import sys
+import subprocess
 
 # Create your views here.
 def home(request):
@@ -22,9 +24,27 @@ def projects(request):
     return render(request, 'blog/projects.html', context)
 
 def lastfm(request):
+
+    if request.method == 'POST':
+        graph_form = LastFMGraphForm(request.POST, instance=LastFMGraph.objects.get(title="MASTER"))
+        if graph_form.is_valid():
+                graph_form.save()
+                graph_instance = LastFMGraph.objects.get(title="MASTER")
+                if(graph_instance.user2 != None):
+                    process_argument = "-u " + graph_instance.user1 + "-" + graph_instance.user2
+                else:
+                    process_argument = "-u " + graph_instance.user1
+                    
+                subprocess.call([sys.executable, '/home/nathan/Development/portfoliosite/lastfmgraph.py', process_argument])
+                
+                return redirect('../lastfmgraph')
+    else:
+        graph_form = LastFMGraphForm(instance=LastFMGraph.objects.get(title="MASTER"))
+
     context = {
         'graph_img': LastFMGraph.objects.get(title="MASTER"),
-        'navtag': 1
+        'navtag': 1,
+        'form': graph_form
     }
     return render(request, 'blog/lastfmgraph.html', context)
 

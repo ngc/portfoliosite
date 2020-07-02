@@ -16,6 +16,8 @@ class Project(models.Model):
 class LastFMGraph(models.Model):
     picture = models.ImageField(default='default.png', blank=True)
     title = models.CharField(max_length=30, default='MASTER', blank=True)
+    user1 = models.CharField(max_length=100, null=True)
+    user2 = models.CharField(max_length=100, null=True)
 
 class Profile(models.Model):
     name = models.CharField(max_length=100)
