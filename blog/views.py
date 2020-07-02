@@ -4,6 +4,7 @@ from .models import Project, Profile, LastFMGraph
 from subprocess import run, PIPE
 from .forms import LastFMGraphForm
 import sys
+import os
 import subprocess
 
 # Create your views here.
@@ -34,8 +35,10 @@ def lastfm(request):
                     process_argument = "-u " + graph_instance.user1 + "-" + graph_instance.user2
                 else:
                     process_argument = "-u " + graph_instance.user1
-                    
-                subprocess.call([sys.executable, '/home/nathan/Development/portfoliosite/lastfmgraph.py', process_argument])
+                
+                devnull = open(os.devnull, 'wb')
+                #Popen(["python3", " /home/nathan/portfoliosite/lastfmgraph.py", process_argument])
+                subprocess.run([sys.executable, '/home/nathan/portfoliosite/lastfmgraph.py', process_argument])
                 
                 return redirect('../lastfmgraph')
     else:
