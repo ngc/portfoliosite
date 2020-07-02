@@ -13,6 +13,10 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
+class LastFMGraph(models.Model):
+    picture = models.ImageField(default='default.png', blank=True)
+    title = models.CharField(max_length=30, default='MASTER', blank=True)
+
 class Profile(models.Model):
     name = models.CharField(max_length=100)
     picture = models.ImageField(default='default.png', blank=True)

@@ -126,7 +126,7 @@ def get_tracks(server, usernames, startpage=1, sleep_func=time.sleep, tracktype=
     username_list = usernames.split('-')
     print(username_list)
     if(len(username_list) > 1):
-        graph_title = username_list[0] + " vs. " + username[1] + " in scrobbles."
+        graph_title = username_list[0] + " vs. " + username_list[1] + " in scrobbles."
     else:
         graph_title = username_list[0] + "'s scrobbles overtime."
     
@@ -167,7 +167,8 @@ def get_tracks(server, usernames, startpage=1, sleep_func=time.sleep, tracktype=
 
     plt.gcf().autofmt_xdate()
     plt.legend(loc="upper left")
-    plt.savefig('filename.png', dpi=300)
+    plt.title(graph_title)
+    plt.savefig('filename.png', dpi=300, bbox_inches='tight',pad_inches=0)
     quit()
 
 def main(server, username, startpage, outfile, infotype='recenttracks'):

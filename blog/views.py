@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Project
-from .models import Profile
+from .models import Project, Profile, LastFMGraph
 from subprocess import run, PIPE
 import sys
 
@@ -24,6 +23,7 @@ def projects(request):
 
 def lastfm(request):
     context = {
+        'graph_img': LastFMGraph.objects.get(title="MASTER"),
         'navtag': 1
     }
     return render(request, 'blog/lastfmgraph.html', context)
@@ -34,6 +34,7 @@ def dmoj(request):
         'navtag': 1
     }
     return render(request, 'blog/dmojprofilemaker.html', context)
+
 ###END PROJECTS###
 
 def resume(request):

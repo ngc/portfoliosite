@@ -22,7 +22,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'blog/images/icons/favicon-16x16.png' %}">
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <a class="navbar-brand">Nathan Coulas</a>
           <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
 
       <div class="wrapper" style="height: 100%; background-color: white;">
         <div>     
-        <div class="container-fluid" style = "margin-left: auto; margin-right: auto; display: table;">
+        <div class="container-fluid" style = "margin-top: 5%; margin-left: auto; margin-right: auto; display: table;">
           {% block content %}
           {% endblock %}
         </div>
