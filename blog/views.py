@@ -12,6 +12,9 @@ def home(request):
     }
     return render(request, 'blog/about.html', context)
 
+###PROJECTS######
+    #All projects including the overview page, written posts
+    #or the working demos themselves go under here
 def projects(request):
     context = {
         'projects': Project.objects.all().order_by('order'),
@@ -25,18 +28,21 @@ def lastfm(request):
     }
     return render(request, 'blog/lastfmgraph.html', context)
 
-def resume(request):
-    context = {
-        'navtag': 2
-    }
-    return render(request, 'blog/resume.html', context)
-
 def dmoj(request):
     context = {
         'profiles': Profile.objects.all(),
         'navtag': 1
     }
     return render(request, 'blog/dmojprofilemaker.html', context)
+###END PROJECTS###
+
+def resume(request):
+    context = {
+        'navtag': 2
+    }
+    return render(request, 'blog/resume.html', context)
+
+
 
 def execute(request):
     info=request.POST.get("info")

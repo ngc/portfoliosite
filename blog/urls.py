@@ -9,6 +9,7 @@ urlpatterns = [
     path('projects/', views.projects),
     path('resume/', views.resume),
     path('dmojprofilemaker/', views.dmoj),
+    path('lastfmgraph/', views.lastfm),
     path('execute/', views.execute)
 ]
 
