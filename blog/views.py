@@ -37,8 +37,7 @@ def lastfm(request):
                     process_argument = "-u " + graph_instance.user1
                 
                 devnull = open(os.devnull, 'wb')
-                #Popen(["python3", " /home/nathan/portfoliosite/lastfmgraph.py", process_argument])
-                subprocess.run([sys.executable, '/home/nathan/portfoliosite/lastfmgraph.py', process_argument])
+                subprocess.run(["nohup", sys.executable, '/home/nathan/portfoliosite/lastfmgraph.py', process_argument])
                 
                 return redirect('../lastfmgraph')
     else:
@@ -65,8 +64,6 @@ def resume(request):
         'navtag': 2
     }
     return render(request, 'blog/resume.html', context)
-
-
 
 def execute(request):
     info=request.POST.get("info")
