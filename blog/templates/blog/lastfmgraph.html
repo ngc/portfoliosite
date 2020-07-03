@@ -51,17 +51,7 @@
       console.log(loading)
       console.log(document.getElementById("graph-img").src)
       if (loading) {
-        if(status === "Loading"){
-          document.getElementById("generator-message").innerHTML = "Loading.";
-        }else if(status === "Loading."){
-          document.getElementById("generator-message").innerHTML = "Loading..";
-        }else if(status === "Loading.."){
-          document.getElementById("generator-message").innerHTML = "Loading...";
-        }else if(status === "Loading..."){
-          document.getElementById("generator-message").innerHTML = "Loading";
-        }
-        document.getElementById("generator-message").innerHTML += " reload the page in a little while." 
-        status = document.getElementById("generator-message").innerHTML
+        document.getElementById("generator-message").innerHTML = "Your graph is now loading, check back in a little while.";
       }else{
         document.getElementById("generator-message").innerHTML = "Most recently made graph is displayed publicly.";
       }
