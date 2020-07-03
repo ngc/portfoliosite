@@ -39,7 +39,6 @@ def lastfm(request):
                 devnull = open(os.devnull, 'wb')
                 subprocess.Popen(["nohup", sys.executable, '/home/nathan/Development/portfoliosite/lastfmgraph.py', process_argument])
                 
-                return redirect('../lastfmgraph')
     else:
         graph_form = LastFMGraphForm(instance=LastFMGraph.objects.get(title="MASTER"))
 
